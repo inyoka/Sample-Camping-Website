@@ -1,0 +1,24 @@
+{
+  "name": "yelpcamp",
+  "version": "1.0.0",
+  "description": "the-web-developer-bootcamp final project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inyoka/yelpcamp.git"
+  },
+  "keywords": [
+    "Mongo",
+    "Express",
+    "Node.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inyoka/yelpcamp/issues"
+  },
+  "homepage": "https://github.com/inyoka/yelpcamp#readme"
+}
