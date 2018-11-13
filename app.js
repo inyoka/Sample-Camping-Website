@@ -21,7 +21,8 @@ app.post('/campgrounds', function(req, res){
   res.send("Campground POST route.");
 });
 
-    res.render('campgrounds', {campgrounds:campgrounds});
+app.get('/campgrounds/new', function(req, res){
+  res.render('new.ejs');
 });
 
 // This differs from the course logging the port and IP being used.
