@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
   res.render('landing');
@@ -14,6 +14,12 @@ app.get('/campgrounds', function(req, res){
       {name: 'Granite Hill', image: 'https://pixabay.com/get/e83db50a2ff5083ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'},
       {name: "Mountain Goat's Rest", image: 'https://pixabay.com/get/e837b1072af4003ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'}
     ]
+    res.render('campgrounds', {campgrounds: campgrounds});
+});
+
+app.post('/campgrounds', function(req, res){
+  res.send("Campground POST route.");
+});
 
     res.render('campgrounds', {campgrounds:campgrounds});
 });
