@@ -15,7 +15,7 @@ app.get('/campgrounds', function(req, res){
       {name: "Mountain Goat's Rest", image: 'https://pixabay.com/get/e837b1072af4003ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'}
     ]
 
-    res.render('campgrounds');
+    res.render('campgrounds', {campgrounds:campgrounds});
 });
 
 // This differs from the course logging the port and IP being used.
