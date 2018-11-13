@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/inyoka/yelpcamp/issues"
   },
-  "homepage": "https://github.com/inyoka/yelpcamp#readme"
+  "homepage": "https://github.com/inyoka/yelpcamp#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
