@@ -30,7 +30,7 @@ app.post('/campgrounds', function(req, res){
 });
 
 app.get('/campgrounds/new', function(req, res){
-  res.render('new.ejs');
+  res.render('new');
 });
 
 // This differs from the course logging the port and IP being used.
