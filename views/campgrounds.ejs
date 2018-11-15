@@ -7,11 +7,17 @@
   <p>Hand-picked campsites from around the world.</p>
   <p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground.</a></p>
 
-<% campgrounds.forEach(function(campground){ %>
-  <div class="">
-    <h4><%= campground.name %></h4>
-    <img src="<%= campground.image %>" alt="">
-  </div>
-<% }) %>
+</div>
+</header>
+
+
+<div class="flex">
+  <% campgrounds.forEach(function(campground){ %>
+    <div class='column'><img class="img-thumbnail img-fluid" src="<%= campground.image %>" alt=""><h4><%= campground.name %></h4></div>
+
+
+  <% }) %>
+
+</div>
 
 <% include partials/footer %>
