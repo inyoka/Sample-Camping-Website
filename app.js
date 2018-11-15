@@ -6,9 +6,12 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 
 var campgrounds = [
-    {name: 'Salmons Creek', image: 'https://pixabay.com/get/e83db40e28fd033ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'},
-    {name: 'Granite Hill', image: 'https://pixabay.com/get/e83db50a2ff5083ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'},
-    {name: "Mountain Goat's Rest", image: 'https://pixabay.com/get/e837b1072af4003ed1584d05fb1d4e97e07ee3d21cac104491f2c17daee9b4b9_340.jpg'}
+    {name: 'Salmons Creek', image: 'https://cdn.vox-cdn.com/thumbor/1j72cfH6ka3baNiIvbstiHQbnfo=/0x0:5225x3479/920x613/filters:focal(2195x1322:3031x2158):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54137643/camping_tents.0.jpg'},
+    {name: 'Granite Hill', image: 'https://s3.amazonaws.com/imagescloud/images/medias/reservation/camping/main.jpg'},
+    {name: "Mountain Goat's Rest", image: 'https://media.timeout.com/images/105160998/1024/576/image.jpg'},
+    {name: "Mountain Goat's Rest", image: 'https://media.timeout.com/images/105160998/1024/576/image.jpg'},
+    {name: 'Salmons Creek', image: 'https://cdn.vox-cdn.com/thumbor/1j72cfH6ka3baNiIvbstiHQbnfo=/0x0:5225x3479/920x613/filters:focal(2195x1322:3031x2158):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54137643/camping_tents.0.jpg'},
+    {name: 'Granite Hill', image: 'https://s3.amazonaws.com/imagescloud/images/medias/reservation/camping/main.jpg'}
   ];
 
 app.get('/', function(req, res){
