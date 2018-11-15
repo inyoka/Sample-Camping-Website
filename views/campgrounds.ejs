@@ -10,14 +10,13 @@
 </div>
 </header>
 
-
-<div class="flex">
+<section class="flex">
   <% campgrounds.forEach(function(campground){ %>
-    <div class='column'><img class="img-thumbnail img-fluid" src="<%= campground.image %>" alt=""><h4><%= campground.name %></h4></div>
-
-
+    <figure class="figure column">
+      <img class="img-thumbnail figure-img img-fluid rounded" src="<%= campground.image %>" alt="">
+      <figcaption class="figure-caption text-centre"><h5><%= campground.name %></h5></figcaption>
+    </figure>
   <% }) %>
-
-</div>
+</section>
 
 <% include partials/footer %>
