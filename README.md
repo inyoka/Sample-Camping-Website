@@ -64,6 +64,6 @@ Unknown
 
 ## Acknowledgments
 
-* [Final project from **"The Web Developer Bootcamp"**, a course which is thoroughly recommended (link).](https://www.udemy.com/the-web-developer-bootcamp)
+* [Final project from **"The Web Developer Bootcamp"**, a course which is thoroughly recommended.](https://www.udemy.com/the-web-developer-bootcamp)
 * Thanks to [Colt Steele : Developer and Bootcamp Instructor](https://www.udemy.com/user/coltsteele/).
 * All the programmers involved in Node.JS and the extensive library of addons available through npm.
