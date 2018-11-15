@@ -10,6 +10,10 @@
     padding: 0 4px;
 }
 
+figcaption{
+  text-align: center;
+}
+
 @media (max-width: 800px) {
     .column {
         flex: 50%;
