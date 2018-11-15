@@ -1,8 +1,11 @@
 <% include partials/header %>
 
-<h1>Campgrounds Page</h1>
+<header class='jumbotron'>
+  <div class="container">
 
-<a href="/campgrounds/new">Add New Campground.</a>
+  <h1>Welcome to YelpCamp</h1>
+  <p>Hand-picked campsites from around the world.</p>
+  <p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground.</a></p>
 
 <% campgrounds.forEach(function(campground){ %>
   <div class="">
