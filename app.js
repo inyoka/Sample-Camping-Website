@@ -7,12 +7,16 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 var campgrounds = [
-    {name: 'Salmons Creek', image: 'https://cdn.vox-cdn.com/thumbor/1j72cfH6ka3baNiIvbstiHQbnfo=/0x0:5225x3479/920x613/filters:focal(2195x1322:3031x2158):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54137643/camping_tents.0.jpg'},
-    {name: 'Granite Hill', image: 'https://s3.amazonaws.com/imagescloud/images/medias/reservation/camping/main.jpg'},
-    {name: "Mountain Goat's Rest", image: 'https://media.timeout.com/images/105160998/1024/576/image.jpg'},
-    {name: "Mountain Goat's Rest", image: 'https://media.timeout.com/images/105160998/1024/576/image.jpg'},
-    {name: 'Salmons Creek', image: 'https://cdn.vox-cdn.com/thumbor/1j72cfH6ka3baNiIvbstiHQbnfo=/0x0:5225x3479/920x613/filters:focal(2195x1322:3031x2158):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54137643/camping_tents.0.jpg'},
-    {name: 'Granite Hill', image: 'https://s3.amazonaws.com/imagescloud/images/medias/reservation/camping/main.jpg'}
+    {name: 'Salmons Creek', image: 'imgs/camp-01.jpg'},
+    {name: 'Granite Hill', image: 'imgs/camp-02.jpg'},
+    {name: "Mountain Goat's Rest", image: 'imgs/camp-03.jpg'},
+    {name: "Canoe Pass", image: 'imgs/camp-04.jpg'},
+    {name: 'Family Camping', image: 'imgs/camp-05.jpg'},
+    {name: 'Cabin Life', image: 'imgs/camp-06.jpg'},
+    {name: 'Lake View', image: 'imgs/camp-07.jpg'},
+    {name: 'Hammock Hill', image: 'imgs/camp-08.jpg'},
+    {name: 'Stary Night Campsite', image: 'imgs/camp-09.jpg'},
+    {name: 'Campfire Beech', image: 'imgs/camp-10.jpg'}
   ];
 
 app.get('/', function(req, res){
