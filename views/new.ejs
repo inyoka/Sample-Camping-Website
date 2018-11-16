@@ -1,16 +1,13 @@
 <% include partials/header %>
 
-<h1 class="text-center">Create new campground</h1>
-
 <section class="flex-new-camp">
-  <form class="btn-toolbar mt-4" action="/campgrounds" method="post">
-    <input class="form-control my-2" type="text" name='name' placeholder="name">
+  <form class="btn-toolbar " action="/campgrounds" method="post">
+    <h1 class="text-center w-100">Create new campground</h1>
+    <input class="form-control my-2 mt-4" type="text" name='name' placeholder="name">
     <input class="form-control my-2" type="text" name='image' placeholder="image url">
     <button class="btn btn-lg btn-primary btn-block my-2">Submit</button>
     <a href="/campgrounds">Go Back</a>
   </form>
 </section>
-
-
 
 <% include partials/footer %>
