@@ -1,7 +1,17 @@
-.flex{
+section{
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end; // Alternately choose centre
+}
+
+/* Flex settings specific to sections.  */
+
+.flex-image{
+  flex-wrap: wrap;
+  align-items: flex-end; // Alternately choose centre
+}
+
+.flex-new-camp{
+  width: 40%;
+  margin: 0 auto;
 }
 
 .column {
