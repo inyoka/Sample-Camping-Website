@@ -1,6 +1,6 @@
 <% include partials/header %>
 
-<header class='jumbotron'>
+<header class='jumbotron container'>
   <div class="container">
 
   <h1>Welcome to YelpCamp</h1>
@@ -10,7 +10,7 @@
 </div>
 </header>
 
-<section class="flex">
+<section class="flex-image container">
   <% campgrounds.forEach(function(campground){ %>
     <figure class="figure column">
       <img class="img-thumbnail figure-img img-fluid rounded" src="<%= campground.image %>" alt="">
