@@ -80,7 +80,13 @@ app.get('/campgrounds/new', function(req, res){
 
 // SHOW - Displays info about one campground.
 app.get("/campgrounds/:id", function(req, res){
-  res.render('show');
+  Campground.findById(req.params.id, function(err, foundCampground){
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("show", {campground: foundCampground});
+    }
+  });
 });
 
 // This differs from the course logging the port and IP being used.
