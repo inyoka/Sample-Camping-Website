@@ -41,6 +41,8 @@ app.get('/', function(req, res){
   res.render('landing');
 });
 
+// INDEX - Displays list of all campgrounds.
+
 // Images from https://www.photosforclass.com/search?text=camping
 app.get('/campgrounds', function(req, res){
     // Get all campgrounds from server.
@@ -52,6 +54,8 @@ app.get('/campgrounds', function(req, res){
       }
     });
 });
+
+// CREATE - Add new campground to DB.
 
 app.post('/campgrounds', function(req, res){
   var name = req.body.name;
@@ -67,11 +71,13 @@ app.post('/campgrounds', function(req, res){
   })
 });
 
+// NEW - Displays form for new campground.
+
 app.get('/campgrounds/new', function(req, res){
   res.render('new');
 });
 
-// SHOW - displays info about one campground
+// SHOW - Displays info about one campground.
 app.get("/campgrounds/:id", function(req, res){
   res.render('show');
 });
