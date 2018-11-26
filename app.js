@@ -71,6 +71,11 @@ app.get('/campgrounds/new', function(req, res){
   res.render('new');
 });
 
+// SHOW - displays info about one campground
+app.get("/campgrounds/:id", function(req, res){
+  res.render('show');
+});
+
 // This differs from the course logging the port and IP being used.
 // ... I am running locally not on c9.
 // Express 4.x app.listen() is an asynchronous operation, hence the 'var listener'.
