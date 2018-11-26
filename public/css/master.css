@@ -20,6 +20,15 @@
     padding: 0 4px;
 }
 
+figure{
+  border-radius: 5px;
+  background: #EEE;
+}
+
+.img-thumbnail{
+  margin-top: 5px;
+}
+
 figcaption{
   text-align: center;
 }
