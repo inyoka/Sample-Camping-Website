@@ -54,7 +54,7 @@ app.post('/campgrounds', function(req, res){
 // NEW - Displays form for new campground.
 
 app.get('/campgrounds/new', function(req, res){
-  res.render('new');
+  res.render('campgrounds/new');
 });
 
 // SHOW - Displays info about one campground.
@@ -64,7 +64,7 @@ app.get("/campgrounds/:id", function(req, res){
       console.log(err);
     } else {
       console.log(foundCampground);
-      res.render("show", {campground: foundCampground});
+      res.render("campgrounds/show", {campground: foundCampground});
     }
   });
 });
