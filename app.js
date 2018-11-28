@@ -69,6 +69,19 @@ app.get("/campgrounds/:id", function(req, res){
   });
 });
 
+//  COMMENT ROUTES
+
+app.get("/campgrounds/:id/comments/new", function(req, res){
+  Campground.findById(req.params.id, function(err, campground){
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("comments/new", {campground: campground});
+    }
+  });
+});
+
+
 // This differs from the course logging the port and IP being used.
 // ... I am running locally not on c9.
 // Express 4.x app.listen() is an asynchronous operation, hence the 'var listener'.

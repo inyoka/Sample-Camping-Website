@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<section class="flex-new-camp">
+  <form class="btn-toolbar " action="/campgrounds/<%=campground.id%>/comments" method="post">
+    <h1 class="text-center w-100">Add new comment to <%= campground.name %></h1>
+    <input class="form-control my-2 mt-4" type="text" name='name' placeholder="name">
+    <input class="form-control my-2" type="text" name='image' placeholder="image url">
+    <textarea class="form-control my-2" type="textarea" name="description" placeholder="description" value="" rows="3"></textarea>
+    <button class="btn btn-lg btn-primary btn-block my-2">Submit</button>
+    <a href="/campgrounds">Go Back</a>
+  </form>
+</section>
+
+<% include ../partials/footer %>
