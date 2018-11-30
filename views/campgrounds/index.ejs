@@ -12,15 +12,15 @@
 
 <section class="flex flex-image container">
   <% campgrounds.forEach(function(campground){ %>
-    <figure class="figure column">
-      <img class="img-thumbnail figure-img img-fluid rounded" src="<%= campground.image %>" alt="">
-      <figcaption class="figure-caption">
-        <h5><%= campground.name %></h5>
-        <p>
-          <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
-        </p>
-      </figcaption>
-    </figure>
+
+    <div class="card column">
+      <img class="card-img-top" src="<%= campground.image %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= campground.name %></h5>
+        <p class="card-text text-center"><a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a></p>
+      </div>
+    </div>
+
   <% }) %>
 </section>
 
