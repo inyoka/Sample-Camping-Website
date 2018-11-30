@@ -1,18 +1,42 @@
 <% include ../partials/header %>
 
-<section class="container">
+<section class="container flex flex-row">
 
-    <h1><%= campground.name %></h1>
+  <aside class="flex-aside">
+    <p class="lead">YelpCamp</p>
+    <div class="list-group">
+      <li class="list-group-item active">Info 1</li>
+      <li class="list-group-item">Info 2</li>
+      <li class="list-group-item">Info 3</li>
+    </div>
+  </aside>
 
-    <img class="img-fluid rounded" src="/<%= campground.image %>" alt="">
 
-    <p><%= campground.description %></p>
+  <article class="flex-article thumbnail">
+    <div class="card show">
+        <img class="card-img-top" src="<%= campground.image %>" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title float-right">$9.00/night</h4>
+            <h4 class="card-title"><a href="#"><%= campground.name %></a></h4>
+            <p class="card-text"><%= campground.description %></p>
+        </div>
+    </div>
 
-    <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
-
-    <% campground.comments.forEach(function(comment){ %>
-        <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
-    <% }) %>
+    <div class="card bg-light my-3 show">
+      <div class="card-header text-right"><a href="/campgrounds/<%= campground._id %>/comments/new" class="btn btn-success">Leave a review</a></div>
+      <!-- <div class="card-body"> -->
+      <ul class="list-group list-group-flush">
+        <% campground.comments.forEach(function(comment){ %>
+            <li class="list-group-item">
+              <strong><%= comment.author %></strong>
+              <span class="float-right">10 days ago</span>
+              <br>
+              <%= comment.text %></li>
+        <% }) %>
+      </ul>
+      </div>
+    </div>
+  </article>
 
 </section>
 
