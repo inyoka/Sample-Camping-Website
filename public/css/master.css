@@ -2,8 +2,18 @@
     display: flex;
 }
 
+.flex-row{
+  flex-direction: row;
+}
 /* Flex settings specific to sections.  */
 
+.flex-aside {
+  flex: 1 1 0;
+}
+
+.flex-article {
+  flex: 3 1 0;
+  margin: 0 3%;
 }
 
 .flex-new-camp{
