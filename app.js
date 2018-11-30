@@ -44,7 +44,7 @@ app.post('/campgrounds', function(req, res){
     if(err){
       console.log(err);
     } else {
-      res.redirect("campgrounds/index");
+      res.redirect("campgrounds");
     }
   })
 });
