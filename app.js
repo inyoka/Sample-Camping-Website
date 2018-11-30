@@ -80,6 +80,29 @@ app.get("/campgrounds/:id/comments/new", function(req, res){
 });
 
 
+app.post("/campgrounds/:id/comments", function(req, res){
+    var text = req.body.text;
+    var author = req.body.author;
+    var newComment = {text: text, author: author}
+    Campground.findById(req.params.id, function(err, campground){
+        if(err){
+            console.log(err);
+            res.redirect("/campgrounds");
+        } else {
+            Comment.create(newComment, function(err, comment){
+                if(err){
+                    console.log(err);
+                } else {
+                    campground.comments.push(comment);
+                    campground.save();
+                    res.redirect('/campgrounds/' + campground._id);
+                }
+             });
+        }
+    });
+});
+
+
 // This differs from the course logging the port and IP being used.
 // ... I am running locally not on c9.
 // Express 4.x app.listen() is an asynchronous operation, hence the 'var listener'.
