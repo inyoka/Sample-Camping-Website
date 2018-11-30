@@ -14,8 +14,6 @@ app.set('view engine', 'ejs');
 
 // Schema Setup
 
-
-
 app.get('/', function(req, res){
   res.render('landing');
 });
