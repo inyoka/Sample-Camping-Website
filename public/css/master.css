@@ -4,9 +4,6 @@
 
 /* Flex settings specific to sections.  */
 
-.flex-image{
-  flex-wrap: wrap;
-  align-items: flex-end; // Alternately choose centre
 }
 
 .flex-new-camp{
@@ -14,24 +11,11 @@
   margin: 0 auto;
 }
 
+/* For index campsite thumbnails / cards */
 .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-figure{
-  margin: 5px;
-  border-radius: 5px;
-  background: #EEE;
-}
-
-.img-thumbnail{
-  margin-top: 5px;
-}
-
-figcaption{
-  text-align: center;
+  flex: 25%;
+  max-width: 25%;
+  margin: 0 4px;
 }
 
 @media (max-width: 800px) {
