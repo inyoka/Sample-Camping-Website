@@ -160,6 +160,13 @@ app.get('/logout', function (req, res){
 });
 
 
+function isLoggedIn(req, res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect("/login");
+}
+
 // This differs from the course logging the port and IP being used.
 // ... I am running locally not on c9.
 // Express 4.x app.listen() is an asynchronous operation, hence the 'var listener'.
