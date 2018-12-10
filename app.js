@@ -15,6 +15,20 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 seedDB();
 
+// PASSPORT CONFIGURATION
+
+app.use(require("express-session")({
+  secret: "Once again Rusty wins cutest dog!",
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 // Schema Setup
 
 app.get('/', function(req, res){
