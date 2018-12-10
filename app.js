@@ -153,6 +153,12 @@ app.post('/login', passport.authenticate("local",
  }), function(req, res){
 });
 
+app.get('/logout', function (req, res){
+  req.session.destroy(function (err) {
+    res.redirect('/campgrounds');
+  });
+});
+
 
 // This differs from the course logging the port and IP being used.
 // ... I am running locally not on c9.
