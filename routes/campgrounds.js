@@ -36,7 +36,7 @@ router.post('/', isLoggedIn, function(req, res){
     } else {
       res.redirect("/campgrounds");
     }
-  })
+  });
 });
 
 // NEW - Displays form for new campground.
