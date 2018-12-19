@@ -34,7 +34,7 @@ router.post('/', isLoggedIn, function(req, res){
     if(err){
       console.log(err);
     } else {
-      res.redirect("campgrounds");
+      res.redirect("/campgrounds");
     }
   })
 });
