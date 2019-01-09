@@ -40,13 +40,11 @@ router.post('/', isLoggedIn, function(req, res){
 });
 
 // NEW - Displays form for new campground.
-
 router.get('/new', isLoggedIn, function(req, res){
   res.render('campgrounds/new');
 });
 
 // SHOW - Displays info about one campground.
-
 router.get("/:id", function(req, res){
   Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
     if (err) {
