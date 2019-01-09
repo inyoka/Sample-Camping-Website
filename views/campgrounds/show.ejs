@@ -21,6 +21,9 @@
             <p class="card-text"><%= campground.description %></p>
             <p class="card-text"><em>Submitted by : </em><%= campground.author.username %></p>
             <a class="btn btn-warning btn-sm" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+            <form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </form>
         </div>
     </div>
 
