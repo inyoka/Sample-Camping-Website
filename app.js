@@ -10,6 +10,10 @@ var express = require('express'),
     User = require("./models/user"),
     seedDB = require("./seeds");
 
+
+// Stops deprecation warning about collection.findAndModify
+mongoose.set('useFindAndModify', false);
+
 //requiring routes
 var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
