@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<section class="flex-new-camp">
+  <form action="/campgrounds/<%=campground_id%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+    <h1 class="text-center w-100">Edit Comment</h1>
+
+
+    <!-- <input class="form-control my-2 mt-4" type="text" name='text' placeholder="text"> -->
+    <div class="form-group col-12">
+     <label for="exampleTextarea"></label>
+     <textarea class="form-control"  type="textarea" name='comment[text]' id="exampleTextarea" rows="3" columns="500"><%= comment.text %></textarea>
+   </div>
+
+    <!-- <input class="form-control my-2" type="text" name='author' placeholder="author"> -->
+    <button class="btn btn-lg btn-primary btn-block my-2">Submit</button>
+    <a href="/campgrounds">Go Back</a>
+  </form>
+</section>
+
+<% include ../partials/footer %>
