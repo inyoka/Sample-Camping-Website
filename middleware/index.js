@@ -10,9 +10,9 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
             res.redirect("back");
         } else {
             if(foundCampground.author.id.equals(req.user._id)){
-            next();
+                next();
             } else {
-            res.redirect("back");
+                res.redirect("back");
             }
         }
         });
@@ -23,7 +23,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
 
 middlewareObj.checkCommentOwnership = function checkCommentOwnership(req, res, next){
     if(req.isAuthenticated()){
-      Comment.findById(req.params.comment_id, function(err, foundComment){
+        Comment.findById(req.params.comment_id, function(err, foundComment){
         if (err) {
           res.redirect("back");
         } else {
@@ -33,9 +33,9 @@ middlewareObj.checkCommentOwnership = function checkCommentOwnership(req, res, n
             res.redirect("back");
           }
         }
-      });
+        });
     } else {
-      res.redirect("back");
+        res.redirect("back");
     }
 };
 

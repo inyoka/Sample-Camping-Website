@@ -16,6 +16,7 @@ router.get('/register', function(req, res){
   res.render('register');
 });
 
+// Registration
 router.post('/register', function(req, res){
   var newUser = new User({username: req.body.username});
   User.register(newUser, req.body.password, function(err, user){
@@ -30,11 +31,11 @@ router.post('/register', function(req, res){
 });
 
 // Login form
-
 router.get('/login', function(req, res){
   res.render('login');
 });
 
+// Login
 router.post('/login', passport.authenticate("local",
  {
    successRedirect: "/campgrounds",
@@ -54,5 +55,6 @@ function isLoggedIn(req, res, next){
   }
   res.redirect("/login");
 }
+// Logout Route
 
 module.exports = router;
