@@ -6,6 +6,7 @@
     <input class="form-control my-2 mt-4" type="text" name='campground[name]' value="<%= campground.name %>">
     <input class="form-control my-2" type="text" name='campground[image]' value="<%= campground.image %>">
     <textarea class="form-control my-2" type="textarea" name="campground[description]" rows="3"><%= campground.description %></textarea>
+    <input class="form-control my-2 mb-4" type="number" name='campground[price]' value="campground.price" min="0.00" step="0.10">
     <button class="btn btn-lg btn-primary btn-block my-2">Update</button>
     <a href="/campgrounds">Go Back</a>
   </form>
