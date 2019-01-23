@@ -10,6 +10,7 @@ var express = require('express'),
     Comment = require("./models/comment"),
     User = require("./models/user"),
     seedDB = require("./seeds");
+    const PORT = process.env.PORT || 3000
 
 
 // Stops deprecation warning about collection.findAndModify
@@ -20,7 +21,7 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser : true });
+mongoose.connect("mongodb://localhost/yelp_camp_v12", { useNewUrlParser : true });
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
