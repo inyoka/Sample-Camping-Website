@@ -22,7 +22,7 @@ router.post('/register', function(req, res){
   User.register(newUser, req.body.password, function(err, user){
       if(err){
         console.log(err);
-        return res.render("register");
+        return res.redirect("/register");
       }
       passport.authenticate("local")(req, res, function(){
         res.redirect("/campgrounds");
