@@ -59,12 +59,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 // ... I am running locally not on c9.
 // Express 4.x app.listen() is an asynchronous operation, hence the 'var listener'.
 
-// var listener = app.listen(3000, '127.0.0.1', function(){
-//   var address = listener.address().address;
-//   var port = listener.address().port;
-
-//   console.log('YelpCamp server listening on : ' + address + ':' + port);
-// });
+process.env.port = 3000;
 
 var listener = app.listen(process.env.port, process.env.IP, function(){
   var address = listener.address().address;
@@ -73,6 +68,3 @@ var listener = app.listen(process.env.port, process.env.IP, function(){
   console.log('YelpCamp server listening on : ' + address + ':' + port);
 });
 
-// app.listen(process.env.PORT, process.env.IP, function(){
-//   console.log("The YelpCamp Server Has Started!");
-// });
