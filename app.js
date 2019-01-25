@@ -66,7 +66,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //   console.log('YelpCamp server listening on : ' + address + ':' + port);
 // });
 
-var listener = app.listen(process.env.port || 3000, process.env.IP, function(){
+var listener = app.listen(process.env.port, process.env.IP, function(){
   var address = listener.address().address;
   var port = listener.address().port;
 
