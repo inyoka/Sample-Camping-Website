@@ -54,9 +54,14 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-var listener = app.listen(process.env.port, process.env.IP, function(){
-  var address = listener.address().address;
-  var port = listener.address().port;
+// var listener = app.listen(process.env.port, process.env.IP, function(){
+//   var address = listener.address().address;
+//   var port = listener.address().port;
 
-  console.log('YelpCamp server listening on : ' + address + ':' + port);
+//   console.log('YelpCamp server listening on : ' + address + ':' + port);
+// });
+
+
+app.listen(process.env.PORT, process.env.IP, function(){
+  console.log("The YelpCamp Server Has Started!");
 });
