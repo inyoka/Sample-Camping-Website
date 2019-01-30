@@ -8,9 +8,13 @@ var express = require('express'),
     methodOverride = require("method-override"),
     Campground = require("./models/campground"),
     Comment = require("./models/comment"),
-    User = require("./models/user"),
+    User = require("./models/user");
 
     // var seedDB = require("./seeds");
+
+require('dotenv').config();
+
+var databaseurl = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp_v12';
 
 // Stops deprecation warning about collection.findAndModify
 mongoose.set('useFindAndModify', false);
@@ -20,7 +24,7 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp_v12", { useNewUrlParser : true });
+mongoose.connect(databaseurl, { useNewUrlParser : true });
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
@@ -53,14 +57,9 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-// var listener = app.listen(process.env.port, process.env.IP, function(){
-//   var address = listener.address().address;
-//   var port = listener.address().port;
+var listener = app.listen(process.env.PORT, process.env.IP, function(){
+  var address = listener.address().address;
+  var port = listener.address().port;
 
-//   console.log('YelpCamp server listening on : ' + address + ':' + port);
-// });
-
-
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log("The YelpCamp Server Has Started!");
+  console.log('YelpCamp server listening on : ' + address + ':' + port);
 });
