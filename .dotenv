@@ -1,0 +1,15 @@
+# In order to run this app you need a ".env" file.  
+# To use this file :
+# 1) complete the variable values below.
+# 2) run "npm i dotenv --save"
+# 3) ensure your app.js includes the line "require('dotenv').config();" near the top.
+# 4) IMPORTANT : Ensure ".env" files are listed in your ".gitignore" file.
+# 5) rename this file from ".dotenv" to ".env".
+
+
+# port 3000 if running locally
+PORT=3000 
+# if running on localhost you can use ...
+IP="127.0.0.1" 
+# Setup database and username/password on mlab.com, check the port number ...
+DATABASEURL=mongodb://<username>:<password>@ds111765.mlab.com:<PORT>/yelpcamp 
