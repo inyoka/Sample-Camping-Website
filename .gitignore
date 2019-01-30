@@ -1,5 +1,6 @@
 # Personal ignored files...
 *.env
+heroku.sh
 notes.txt
 
 # Logs
