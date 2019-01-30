@@ -9,9 +9,8 @@ var express = require('express'),
     Campground = require("./models/campground"),
     Comment = require("./models/comment"),
     User = require("./models/user"),
-    seedDB = require("./seeds");
-    const PORT = process.env.PORT || 3000
 
+    // var seedDB = require("./seeds");
 
 // Stops deprecation warning about collection.findAndModify
 mongoose.set('useFindAndModify', false);
