@@ -67,3 +67,4 @@ typings/
 package-lock.json
 *.out
 seeds.js
+*.swp
