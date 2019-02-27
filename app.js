@@ -14,17 +14,19 @@ var express = require('express'),
 
 require('dotenv').config();
 
-var databaseurl = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp_v12';
 
-// Stops deprecation warning about collection.findAndModify
-mongoose.set('useFindAndModify', false);
 
 //requiring routes
 var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect(databaseurl, { useNewUrlParser : true });
+var databaseurl = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp_v12';
+mongoose.connect(databaseurl, { useNewUrlParser: true });
+
+// Stops deprecation warning about collection.findAndModify
+mongoose.set('useFindAndModify', false);
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
