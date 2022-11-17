@@ -4,7 +4,7 @@ Final project from this course, but with many alterations:
 
 # YelpCamp Website
 
-The Web Developer Bootcamp Final Project.  Camp-Site review website based on Node.js, Express & MongoDB.
+Web Developer Bootcamp Final Project using Node.js.  Camp-Site review website based on Node.js, Express & MongoDB.
 * NOTE: This is NOT an exact run-through.  Based on my experience I have used Flex for layout, not Bootstraps columns.  Also I have implemented Bootstrap 4, not 3.  Likely the project will deviate more as I progress.
 
 ## Getting Started
